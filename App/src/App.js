@@ -1,6 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 
-export default function App () {
-    return <Text>Primeiro componente</Text>
+import Primeiro from './Components/Primeiro';
+import Comp, {Comp2, Comp3} from './Components/Multiplos';
+
+export default function App(){
+  return(
+        <SafeAreaView>
+          <Primeiro/>
+          <Comp/>
+          <Comp2/>
+          <Comp3/>
+        </SafeAreaView>
+  );
 }
