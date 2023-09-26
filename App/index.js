@@ -1,9 +1,5 @@
-import { registerRootComponent } from 'expo';
-
-
+import { registerRootComponent } from 'expo'; // Importe registerRootComponent da Expo
 import App from './src/App';
+import { name as appName } from './app.json';
 
-import {name as appName} from './app.json';
-
-
-registerRootComponent(App, {initialProps: appName});
+registerRootComponent(App, { initialProps: appName }); // Registre o componente raiz usando registerRootComponent
