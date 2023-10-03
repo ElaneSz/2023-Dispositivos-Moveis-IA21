@@ -1,36 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Text } from 'react-native';
+import estilo from '../estilo'
 
-const SorteadorNumeros = () => {
-  const [numerosSorteados, setNumerosSorteados] = useState([]);
-
-  useEffect(() => {
-    const gerarNumerosAleatorios = () => {
-      const novosNumeros = [];
-      while (novosNumeros.length < 6) {
-        const novoNumero = Math.floor(Math.random() * 60) + 1;
-        if (!novosNumeros.includes(novoNumero)) {
-          novosNumeros.push(novoNumero);
-        }
-      }
-      setNumerosSorteados(novosNumeros);
-    };
-
-    gerarNumerosAleatorios();
-  }, []);
+export default ({ min,max }) => {
+  const conta = max - min - 1
+  const aleatorio = parseInt(Math.random() * conta) + min
 
   return (
-    <>
-      <Text>Números sorteados:</Text>
-      <Text>{numerosSorteados.join(', ')}</Text>
-    </>
+    <Text style={estilo.fontD} >Número sorteado: { aleatorio }</Text>
   );
-};
-
-export default SorteadorNumeros;
-
-
-
-
+}
 
 //let numeroAleatorio = Math.floor(Math.random() * todasFrases [categoriaSelecionada].frases.length)
