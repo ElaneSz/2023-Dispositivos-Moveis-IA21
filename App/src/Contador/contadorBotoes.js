@@ -10,8 +10,8 @@ export default props => {
     )
 }
 
-const style = SafeAreaView.create({
-    Botoes: {
-        flexDirection: 'row'
+const style = StyleSheet.create({
+    Botoes:{
+        flexDirection: "row"
     }
 })
