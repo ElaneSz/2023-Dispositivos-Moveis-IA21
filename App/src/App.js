@@ -1,13 +1,12 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import UsuarioLogado from './Components/UsuarioLogado';
-import listaProdutosV2 from './Components/Produtos/listaProdutosV2';
-import ListaProdutosV2 from './Components/Produtos/listaProdutosV2';
+import Quadrado from './Components/Layout/Quadrado';
+import FlexboxV1 from './Components/Layout/FlexboxV1';
 
 export default function App() { 
   return (
     <SafeAreaView style={styles.container}>    
-      <ListaProdutosV2/>
+      <FlexboxV1/>
     </SafeAreaView>
   );
 }
