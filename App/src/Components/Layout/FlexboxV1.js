@@ -17,6 +17,7 @@ export default props => {
 const style = StyleSheet.create ({
     FlexV1:{
         flexGrow: 1,
+        justifyContent: 'space-between',
         backgroundColor: '#000'
     }
 })

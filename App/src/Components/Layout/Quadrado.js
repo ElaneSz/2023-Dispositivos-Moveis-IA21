@@ -3,11 +3,15 @@ import { Text } from 'react-native'
 import { View, StyleSheet } from 'react-native'
 
 export default props => {
+    const lado = props.lado || 50
+    const bordar = props.bordar
+    const alt = props.alt
     return (
         <View style={{
-            height: 100,
-            width: 100,
-            backgroundColor:props.cor || '#000'
+            height: alt,
+            width: lado,
+            backgroundColor:props.cor || '#000',
+            borderRadius: bordar,
         }}
         />
     )
