@@ -5,33 +5,24 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#8e44ad',
-  },
-  input: {
-    height: 40,
-    width: '80%',
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 10,
-    padding: 10,
-    borderRadius: 5,
-    color: '#fff',
+    backgroundColor: '#f0ddee',
   },
   row: {
     flexDirection: 'row',
     marginBottom: 10,
+    flex: .12
   },
   button: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#3498db',
+    backgroundColor: '#7e2d7e',
     padding: 20,
     margin: 5,
-    borderRadius: 5,
+    borderRadius: 50,
   },
   operationButton: {
-    backgroundColor: '#e74c3c',
+    backgroundColor: '#be7abb',
   },
   operationColumn: {
     flex: 1,
@@ -42,11 +33,6 @@ export const globalStyles = StyleSheet.create({
   },
   buttonText: {
     color: '#fff',
-    fontSize: 20,
-  },
-  result: {
-    marginTop: 10,
-    fontSize: 24,
-    color: '#fff',
-  },
+    fontSize: 30,
+  }
 });

@@ -42,7 +42,7 @@ export default function App() {
 
       <Input
         value={inputText}
-        placeholder="Enter number"
+        placeholder=""
         onChangeText={(text) => setInputText(text)}
       />
 
@@ -64,18 +64,19 @@ export default function App() {
         <Button onPress={() => handleButtonPress('1')} text="1" />
         <Button onPress={() => handleButtonPress('2')} text="2" />
         <Button onPress={() => handleButtonPress('3')} text="3" />
-        <Button onPress={() => handleButtonPress('*')} text="*" buttonStyle={globalStyles.operationButton} />
+        <Button onPress={() => handleButtonPress('*')} text="×" buttonStyle={globalStyles.operationButton} />
       </View>
 
       <View style={globalStyles.row}>
-        <Button onPress={() => handleButtonPress('0')} text="0" />
         <Button onPress={() => handleButtonPress('.')} text="." />
-        <Button onPress={() => handleButtonPress('/')} text="/" buttonStyle={globalStyles.operationButton} />
+        <Button onPress={() => handleButtonPress('0')} text="0" />
+        <Button onPress={() => handleButtonPress('')} text="♡" />
+        <Button onPress={() => handleButtonPress('/')} text="÷" buttonStyle={globalStyles.operationButton} />
       </View>
 
       <View style={globalStyles.row}>
         <Button onPress={() => handleButtonPress('=')} text="=" buttonStyle={globalStyles.operationButton} />
-        <Button onPress={() => setInputText('')} text="C" buttonStyle={globalStyles.operationButton} />
+        <Button onPress={() => setInputText('')} text="AC" buttonStyle={globalStyles.operationButton} />
       </View>
     </View>
   );
