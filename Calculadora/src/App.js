@@ -5,25 +5,27 @@ import Button from './Components/Button';
 import Header from './Components/Header';
 import { globalStyles } from './styles';
 
+/*\d: Um caractere de classe de caracteres em regex que representa qualquer dígito decimal (0 a 9).*/
+
 export default function App() {
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState('');
 
-  const handleButtonPress = (value) => {
+  const handleButtonPress = (value) => { /*recebe value | representa o valor associado ao botão pressionado na calculadora*/
     if (value === '=') {
-      try {
-        const evalResult = eval(inputText.replace(',', '.'));
+      try { /* Eval | Executa a expressão matemática representada como uma string*/
+        const evalResult = eval(inputText.replace(',', '.')); /* Substitui vírgulas por pontos */
         setResult(evalResult.toString());
         setInputText(evalResult.toString());
       } catch (error) {
         setResult('Error');
       }
-    } else if (/\d/.test(value) || value === '0') {
+    } else if (/\d/.test(value) || value === '0') { /*Verifica se o valor do botão pressionado é um dígito (0-9) ou '0'*/
       setInputText((prev) => (prev === '0' ? value : prev + value));
-    } else if (value === '.' && /\d*\.\d*$/.test(inputText)) {
+    } else if (value === '.' && /\d*\.\d*$/.test(inputText)) { /*Verifica se o valor do botão é um ponto e se o inputText já contém um ponto decimal*/
       // Permite apenas um ponto decimal
       return;
-    } else if (/[+\-*\/]/.test(value)) {
+    } else if (/[+\-*\/]/.test(value)) { /*Verifica se o valor do botão pressionado é um dos operadores matemáticos*/
       // Adiciona o sinal apenas se o último caractere não for um sinal
       setInputText((prev) => {
         const lastChar = prev.slice(-1);
